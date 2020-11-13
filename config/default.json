@@ -1,0 +1,5 @@
+{
+  "port": "5000",
+  "secretKey": "xqesc",
+  "mongoUrl": "mongodb+srv://xqesc:200899X1load@cluster0.v77rw.mongodb.net/gvardeysky?retryWrites=true&w=majority"
+}

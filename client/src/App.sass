@@ -1,0 +1,56 @@
+.auth-page-wrapper
+    position: relative
+    width: 100%
+    min-height: 500px
+    height: 100%
+    .form-auth
+        position: absolute
+        width: 550px
+        height: auto
+        border: 1px solid #000000
+        padding: 42px
+        left: 50%
+        top: 50%
+        margin-right: -50%
+        transform: translate(-50%, -50%)
+        
+.site-header
+    max-width: 100%
+    display: flex
+    padding: 10px 70px
+    background-color: #343434
+    justify-content: space-between
+    align-items: center
+    .contact-wrapper
+        a
+            display: inline-block
+            color: #fff
+            margin-right: 10px
+            text-decoration: none
+            font-size: 18px
+            transition: .3s ease
+            &:hover
+                color: rgba(#fff, .7)
+            &:nth-child(2)
+                border-left: 3px solid #ffffff
+                padding-left: 10px
+            &:nth-child(1)
+                padding-right: 10px
+    .main-nav-wrap
+        width: 40%
+        ul
+            margin: 0
+            padding: 0
+            list-style-type: none
+            display: flex
+            max-width: 100%
+            justify-content: space-around
+            li
+                display: inline-block
+                a
+                    color: #ffffff
+                    transition: .3s ease
+                    font-size: 18px
+                    text-decoration: none
+                    &:hover
+                        color: rgba(#fff, .7)
