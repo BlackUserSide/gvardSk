@@ -27,10 +27,10 @@ export const MainSlider: React.FC = () => {
     <div className="main-slider-wrapper">
       <AwesomeSlider className="slider-wrapper">
         {slider.map((e, i) => (
-          <div key={i}>
+          <div key={i} className="wrapper-content-slider">
             <div
               className="image-wrap"
-              style={{ backgroundImage: e.image }}
+              style={{ backgroundImage: `url(${e.image})` }}
             ></div>
           </div>
         ))}
