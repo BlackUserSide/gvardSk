@@ -10,12 +10,7 @@ const bodyParser = require("body-parser");
 const jsonBody = bodyParser.json();
 router.post(
   "/register",
-  [
-    check("email", "Неверный Email").isEmail(),
-    check("password", "Пароль должен быть больше 6 символов").isLength({
-      min: 6,
-    }),
-  ],
+
   jsonBody,
   async (req, res) => {
     try {

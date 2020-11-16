@@ -7,7 +7,6 @@ const jsonBody = bodyParser.json();
 
 router.get("/", jsonBody, async (req, res) => {
   try {
-    console.log(1);
     const slider = await Slider.find({});
     if (slider) {
       return res.status(200).json(slider);

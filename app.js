@@ -7,6 +7,7 @@ const PORT = config.get("port") || 6000;
 
 app.use("/api/auth", require("./routes/auth_routes"));
 app.use("/api/slider", require("./routes/slider.route"));
+app.use("/api/product", require("./routes/product.route"));
 
 async function start() {
   try {
