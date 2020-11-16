@@ -13,7 +13,7 @@
         top: 50%
         margin-right: -50%
         transform: translate(-50%, -50%)
-        
+
 .site-header
     max-width: 100%
     display: flex
@@ -54,3 +54,49 @@
                     text-decoration: none
                     &:hover
                         color: rgba(#fff, .7)
+
+.bg-lock
+    position: fixed
+    width: 100%
+    height: 100%
+    background-color: rgba(#000, .7)
+    top: 0
+    left: 0
+    z-index: 8
+.main-pop-up
+    position: absolute
+    z-index: 9
+    width: 550px
+    height: auto
+    padding: 25px 32px
+    background-color: #fff
+    top: 50%
+    left: 50%
+    margin-right: -50%
+    transform: translate(-50%, -50%)
+    h5
+        text-align: center
+        font-size: 20px
+    form
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        padding: 20px 20px
+        height: 200px
+        input
+            min-width: 60%
+            min-height: 10%
+            border-radius: 5px
+            padding: 10px
+        button
+            color: #FFFF
+            margin: 30px
+            padding: 5px 40px
+            background: #333842
+            border: 0
+            border-radius: 10px
+            transition: all .5s ease
+            box-shadow: 0 0 1px #000
+            &:hover
+                background-color: rgba(#42454b,.7)

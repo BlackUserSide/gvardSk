@@ -17,19 +17,18 @@ router.get("/", jsonBody, async (req, res) => {
   }
 });
 
-router.delete("/deleteImage:id", jsonBody, async (req, res) => {
+router.delete("/dell/:id", jsonBody, async (req, res) => {
   try {
-    const id = req.params
-    if(id){
-      const response =  await Slider.deleteOne({id});
-
-      console.log(response);
-
-      res.status(200).json({ message: "deleted" });
-    }else{
-      res.status(404).json({ message: "id not found" });
+    const id = req.params.id
+    const imageId = await Slider.findById(id)
+    if(imageId){
+      const response =  await Slider.deleteOne({_id:id});
+      return res.status(200).json({ message: "deleted" });
     }
+    res.status(404).json({ message: "id not found" });
+    
   } catch (e) {
+    console.log(e);
     res.status(500).json({ message: "Ошибка на сервере" });
   }
 });
