@@ -59,4 +59,16 @@ router.get("/get_by_id/:id", jsonBody, async (req, res) => {
     res.status(500).json({ message: "Что то пошло не так" });
   }
 });
+router.get("/get_by_category/:id", jsonBody, async (req, res) => {
+  try {
+    const id = req.params.id;
+    const candidate = await Product.find({ category: id });
+    if (candidate) {
+      return res.status(200).json(candidate);
+    }
+    return res.status(400).json({ message: "Что то пошло не так на сервере" });
+  } catch (e) {
+    res.status(500).json({ message: "Что то пошло не так" });
+  }
+});
 module.exports = router;

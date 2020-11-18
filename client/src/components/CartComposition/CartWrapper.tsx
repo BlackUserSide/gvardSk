@@ -13,7 +13,7 @@ export const CartWrapper: React.FC = () => {
     dataProd: [],
   });
   const { toggleCart } = useContext(MainContext);
-  useEffect(() => {
+  const updateHandler = () => {
     const data: any = localStorage.getItem("cart");
     if (data !== null && data !== undefined) {
       let parseData: any = JSON.parse(data);
@@ -38,6 +38,9 @@ export const CartWrapper: React.FC = () => {
           });
       });
     }
+  };
+  useEffect(() => {
+    updateHandler();
   }, []);
   const handleCart = () => {
     setDataCart((prev) => ({
@@ -52,7 +55,7 @@ export const CartWrapper: React.FC = () => {
       }));
     }, 500);
   };
-  console.log(dataCart);
+  console.log(dataCart.dataProd);
 
   return (
     <div
@@ -63,9 +66,16 @@ export const CartWrapper: React.FC = () => {
         <span onClick={handleCart}>X</span>
       </div>
       <div className="cart-item-collection">
-        {dataCart.dataProd.map((e, i) => (
-          <ItemCart key={i} content={e} />
-        ))}
+        {dataCart.dataProd.length > 0 ? (
+          dataCart.dataProd.map((e, i) => (
+            <ItemCart key={i} updateHandler={updateHandler} content={e} />
+          ))
+        ) : (
+          <h3 className="h3">Корзина пуста</h3>
+        )}
+      </div>
+      <div className="btn-order-start">
+        <span>Оформить заказ</span>
       </div>
     </div>
   );

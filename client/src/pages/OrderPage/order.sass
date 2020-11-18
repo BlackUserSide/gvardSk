@@ -1,0 +1,71 @@
+.order-page
+    position: relative
+    min-height: 750px
+    height: 100%
+    .main-order-wrapper
+        border: 1px solid #000
+        width: 550px
+        position: absolute
+        left: 50%
+        top: 50%
+        margin-right: -50%
+        transform: translate(-50%, -50%)
+        padding: 25px
+        border-radius: 8px
+        .nav-wrap-step
+            display: flex
+            justify-content: space-evenly
+            max-width: 100%
+            .step-wrap
+                background-color: transparent
+                border: 3px solid #679700
+                border-radius: 50%
+                padding: 10px 17px
+                user-select: none
+                font-size: 18px
+                font-weight: 700
+            .active-step
+                animation: hoverStep .4s ease-in-out forwards
+        .main-form-wrapper-order
+            max-width: 100%
+            padding: 35px 15px
+            display: flex
+            flex-direction: column
+            align-items: center
+            .del-method-change
+                display: flex
+                width: 70%
+                justify-content: space-evenly
+                margin-bottom: 15px
+                .change-del
+                    border: 1px solid #679767
+                    padding: 10px 25px
+                    border-radius: 8px
+                    cursor: pointer
+                    transition: all .3s ease
+                    &:hover
+                        background-color: #679767
+                        color: #ffffff
+                .active-change-del
+                    animation: hoverStep .4s ease-in-out forwards
+            input
+                display: inline-block
+                margin-bottom: 25px
+                width: 40%
+                padding: 10px 5px
+                border-radius: 4px
+                border: 1px solid #679767
+            .btn-change-step
+                padding: 10px 25px
+                border: none
+                cursor: pointer
+                transition: .3s ease
+                &:hover
+                    transform: scale(1.1)
+
+@keyframes hoverStep
+    0%
+        background-color: transparent
+    100%
+        background-color: #679700
+        color: #ffffff

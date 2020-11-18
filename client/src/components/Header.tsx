@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { MainContext } from "../context/context";
-
+import cartIcon from "../image/cart.svg";
 export const Header: React.FC = () => {
   const { toggleCart } = useContext(MainContext);
   return (
@@ -19,9 +19,9 @@ export const Header: React.FC = () => {
             <Link to="/sale">Акции</Link>
           </li>
           <li>
-            <Link to="/login" onClick={toggleCart}>
-              Корзина
-            </Link>
+            <a href="/#" onClick={toggleCart}>
+              <img src={cartIcon} alt="Корзина" />
+            </a>
           </li>
         </ul>
       </nav>

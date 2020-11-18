@@ -1,0 +1,81 @@
+.catalog-main
+    .nav-bar-catalog
+        
+        width: 100%
+        ul
+            list-style-type: none
+            display: flex
+            max-width: 100%
+            justify-content: space-between
+            padding: 15px 75px
+            li
+                .span-link-catalog
+                    display: inline-block
+                    font-size: 22px
+                    font-weight: 400
+                    color: #343434
+                    cursor: pointer
+                .active-link
+                    color: rgba(#343434, .7 )
+    .wrapper-component-main
+        max-width: 100%
+        display: flex
+        padding: 25px 75px
+        .item-product-catalog
+            display: flex
+            flex-direction: column
+            padding: 25px
+            border: 1px solid #343434
+            border-radius: 8px
+            align-items: center
+            border: 1px solid #ccc
+            border-radius: 15px
+            cursor: pointer
+            box-shadow: 4px 6px 12px 0px rgba(0,0,0,0.5)
+            transition: all .3s ease
+            .image-wrapper
+                max-width: 65%
+                img
+                    width: 100%
+            .name-wrapper
+                p
+                    font-size: 18px
+                    font-weight: 400
+            .price-wrapper
+                .wrapper-discount
+                    display: flex
+                    align-items: center
+                    .price-cat
+                        font-size: 28px
+                        color: #666666
+                        text-decoration: line-through
+                    .price-cat-discount
+                        font-size: 22px
+                        color: #FF0202
+                        display: inline-block
+                        margin-left: 15px
+                .wrapper-price-catalog
+                    p
+                        font-size: 22px
+                        font-weight: 400
+                        margin: 5px 0
+                        margin-bottom: 15px
+            .btn-wrapper-catalog
+                display: flex
+                width: 80%
+                justify-content: space-evenly
+                .btn-bay
+                    padding: 10px 25px
+                    transition: all .3s ease
+                    &:hover
+                        transform: scale(1.1)
+                .btn-cart
+                    padding: 5px 15px
+                    transition: transform .3s ease
+                    display: flex
+                    justify-content: center
+                    img
+                        width: 70%
+                    &:hover
+                        transform: scale(1.1)
+                    

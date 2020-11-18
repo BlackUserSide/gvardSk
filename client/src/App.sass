@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+body
+    font-family: 'Open Sans'
+    position: relative
 .auth-page-wrapper
     position: relative
     width: 100%
@@ -119,7 +123,40 @@
                         font-size: 22px
                         font-weight: 700
                         color: #343434
-
+            .dell-item
+                position: absolute
+                right: 10px
+                top: 4px
+                font-size: 22px
+                font-weight: 400
+                cursor: pointer
+                &:hover
+                    transform: scale(1.1)
+            .qnt-wrapper
+                display: flex
+                justify-content: space-evenly
+                align-items: center
+                .reg-qnt
+                    font-size: 28px
+                    font-weight: 500
+                    cursor: pointer
+                    user-select: none
+                .data-qnt
+                    font-size: 18px
+                    user-select: none
+    .btn-order-start
+        display: flex
+        align-items: center
+        justify-content: center
+        span
+            user-select: none
+            cursor: pointer
+            color: #ffffff
+            background-color: #679700
+            padding: 10px 25px
+            border-radius: 8px
+            &:hover
+                background-color: rgba(#679700, .8)
 
 .close-cart-wrap
     animation: animOutCart .3s ease-in-out forwards

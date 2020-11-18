@@ -23,22 +23,16 @@ export const ItemRecProd: React.FC<TProps> = ({ content }) => {
             <p>SALE</p>
           </div>
           <div className="wrapper-price-discount">
-            <p>{content.price}</p>
-            <p>{content.discount}</p>
+            <p>{content.price} ₴</p>
+            <p>{content.discount} ₴</p>
           </div>
         </>
       ) : (
         <div className="wrapper-price">
-          <p>{content.price}</p>
+          <p>{content.price} ₴</p>
         </div>
       )}
-      <div className="qnt-wrap">
-        {Number(content.quantity) > 0 ? (
-          <span className="qnt-true">Есть в наличии</span>
-        ) : (
-          <span className="qnt-false">Нет в наличии</span>
-        )}
-      </div>
+
       <div className="btn-collection-item">
         <span className="btn btn-bay">Купить</span>
         <span
